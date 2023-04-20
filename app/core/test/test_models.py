@@ -43,7 +43,7 @@ class UserTests(TestCase):
         email = 'test@example.com'
         password = 'testpass123'
 
-        user = get_user_model().objects.create_user(
+        user = get_user_model().objects.create_superuser(
             email=email, password=password
         )
 
@@ -59,3 +59,4 @@ class UserTests(TestCase):
                 email='', 
                 password='testpass123'
             )
+            
